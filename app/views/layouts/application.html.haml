@@ -1,0 +1,17 @@
+%html{ lang: 'en' }
+  %head
+    %title 'Introduction To Hotwire'
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1" }
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+
+  %body
+    %nav.navbar.navbar-light.bg-light
+      .container-fluid
+        %a.navbar-brand{ href: "#" }
+          %img.d-inline-block.align-text-top{ src: "https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg", alt: "", width: "30", height: "24" }
+          Introduction to Hotwire
+    = yield

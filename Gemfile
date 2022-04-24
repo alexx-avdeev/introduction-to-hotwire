@@ -68,3 +68,6 @@ end
 gem "importmap-rails", "~> 1.0"
 
 gem "rubocop", "~> 1.28"
+
+gem "sassc-rails", "~> 2.1"
+gem 'bootstrap', '~> 5.1.3'
