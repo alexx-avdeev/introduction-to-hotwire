@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
+
+  resource :eager_loading, only: [:show] do
+    get :show_data
+  end
 end
