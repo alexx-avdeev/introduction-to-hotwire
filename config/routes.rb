@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     get :show_data
   end
 
-  resources :quotes
+  resources :quotes do
+    collection do
+      get :broadcast
+    end
+  end
 end

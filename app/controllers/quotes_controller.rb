@@ -1,6 +1,10 @@
 class QuotesController < ApplicationController
   before_action :setup, only: %i[destroy edit show update]
 
+  def broadcast
+    @quotes = Quote.all.order_by(created_at: -1)
+  end
+
   def create
     @quote = Quote.new(quote_params)
     if @quote.save

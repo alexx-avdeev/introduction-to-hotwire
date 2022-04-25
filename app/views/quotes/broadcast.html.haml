@@ -1,0 +1,14 @@
+= turbo_frame_tag :main_content do
+  .card{id: 'items-card'}
+    .card-header
+      %h5.card-title.mb-0 Quotes
+    .card-body
+      .row.mb-2
+        .col-2
+          %h6 Author
+        .col-9
+          %h6 Quote
+        .col-1
+      = turbo_stream_from :quote_list
+      = tag.div id: :quotes do
+        = render @quotes
