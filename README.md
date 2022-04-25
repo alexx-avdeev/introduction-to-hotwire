@@ -8,7 +8,7 @@ Setup:
 * download the source code
 * make sure you have a local instance of MongoDB running
 * `bundle install`
-* `rails c`
+* `rails s`
 
 What is demonstrated:
 * Turbo frames
