@@ -33,5 +33,17 @@ module IntroductionToHotwire
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      if html_tag !~ /^\<label/
+        %(#{ html_tag }
+          <span class="text-danger">
+            #{ instance.error_message.join(', ') }
+          </span>
+        ).html_safe
+      else
+        html_tag
+      end
+    end
   end
 end

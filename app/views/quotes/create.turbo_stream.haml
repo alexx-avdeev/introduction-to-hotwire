@@ -1,0 +1,7 @@
+= turbo_stream.update :new_quote, ''
+
+= turbo_stream.prepend :quotes, @quote
+
+= turbo_stream.update :new_quote_button, partial: 'new_quote_button'
+
+= append_flash_stream

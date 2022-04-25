@@ -1,0 +1,14 @@
+= turbo_frame_tag quote do
+  .row.mb-2
+    .col-2
+      = text_field_tag quote, :author, class: %w(form-control), disabled: true, value: quote.author
+    .col-9
+      = text_area_tag :text, quote.text, class: 'form-control', disabled: true, rows: 1
+    .col-1.px-1.d-flex.justify-content-end
+      .row.align-self-center
+        .col-auto.ms-auto
+          = link_to edit_quote_path(quote) do
+            = image_tag('feather-edit.svg')
+        .col-auto
+          = button_to quote_path(quote), { class: 'button-link', method: :delete, form: { data: { turbo_confirm: "Are you sure you want to delete the quote?" } } } do
+            = image_tag('feather-trash-2.svg')

@@ -14,3 +14,20 @@
  *= require_self
  */
 @import "bootstrap";
+
+.button-link {
+  border: 0;
+  padding: 0;
+  background-color: inherit;
+  color: inherit;
+  transition: 0.5s;
+}
+
+.button-link:hover {
+  color: #1a1d26;
+  text-decoration: underline;
+}
+
+.button-link:focus {
+  outline: none;
+}

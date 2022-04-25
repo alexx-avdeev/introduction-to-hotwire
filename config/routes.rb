@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resource :eager_loading, only: [:show] do
     get :show_data
   end
+
+  resources :quotes
 end

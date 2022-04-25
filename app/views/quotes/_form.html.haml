@@ -1,0 +1,15 @@
+= form_with model: quote, class: 'mb-0' do |form|
+  .row.mb-2
+    .col-2
+      = form.text_field :author, class: 'form-control'
+    .col-9
+      = form.text_area :text, class: 'form-control', rows: 1
+    .col-1.px-1.d-flex.justify-content-end
+      .row.align-self-center
+        .col-auto.ms-auto
+          = form.submit type: :image, src: asset_path('feather-save.svg')
+        .col-auto
+          - if quote.new_record?
+            = link_to image_tag('feather-x-circle.svg'), new_quote_path(query: 'cancel')
+          - else
+            = link_to image_tag('feather-x-circle.svg'), quote_path(quote)

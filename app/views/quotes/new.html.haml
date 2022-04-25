@@ -1,0 +1,6 @@
+= turbo_frame_tag :new_quote do
+  - if params[:query] == 'cancel'
+    = turbo_stream.update :new_quote_button, partial: 'new_quote_button'
+  - else
+    = render 'form', quote: @quote
+    = turbo_stream.update :new_quote_button, ''

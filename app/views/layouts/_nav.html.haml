@@ -12,7 +12,7 @@
         %li.nav-item
           %a.nav-link.active{ aria: { current: "page" }, href: root_path, data: { turbo_frame: :main_content, turbo_action: :advance } } Home
         %li.nav-item
-          %a.nav-link{ href: "#" } Link
+          = link_to 'Quotes', quotes_path, class: 'nav-link', data: { turbo_frame: :main_content, turbo_action: :advance }
         %li.nav-item.dropdown
           %a.nav-link.dropdown-toggle#navbarDropdown{ href: "#",
                                                           role: "button",
@@ -28,5 +28,3 @@
               %hr.dropdown-divider
             %li
               %a.dropdown-item{ href: "#" } Something else here
-        %li.nav-item
-          %a.nav-link.disabled{ href: "#", tabindex: "-1", aria: { disabled: "true" } } Disabled
