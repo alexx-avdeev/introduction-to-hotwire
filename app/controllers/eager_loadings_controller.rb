@@ -2,6 +2,7 @@ class EagerLoadingsController < ApplicationController
   def show; end
 
   def show_data
-    sleep(5)
+    @quote = Quote.collection.aggregate([{ '$sample': { size: 1 } }]).first
+    sleep(2)
   end
 end

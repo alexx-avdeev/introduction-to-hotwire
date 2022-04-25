@@ -1,6 +1,6 @@
 = turbo_frame_tag :quote_content do
   %blockquote.blockquote.mb-0
-    %p A well-known quote, contained in a blockquote element.
+    %p= @quote['text']
     %footer.blockquote-footer
-      Someone famous in
-      %cite{ title: "Source Title" } Source Title
+      by
+      %cite{ title: @quote['author'] }= @quote['author']
