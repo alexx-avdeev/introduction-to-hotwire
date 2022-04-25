@@ -1,0 +1,9 @@
+- p message
+%div{role: "alert",
+         class: ['toast', 'align-items-center', 'text-white', 'border-0', "bg-#{ message[:type] }"],
+         data: {controller: 'flash'},
+         aria: {live: "assertive", atomic: "true"}}
+  .d-flex
+    .toast-body
+      = raw message[:text]
+    %button.btn-close.btn-close-white.me-2.m-auto{type: "button", data: {bs_dismiss: "toast"}, aria: {label: "Close"}}

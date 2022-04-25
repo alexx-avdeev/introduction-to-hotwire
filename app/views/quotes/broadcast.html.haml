@@ -10,5 +10,6 @@
           %h6 Quote
         .col-1
       = turbo_stream_from :quote_list
+      = turbo_stream_from :flash_messages
       = tag.div id: :quotes do
         = render @quotes
