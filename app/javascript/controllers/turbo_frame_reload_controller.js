@@ -15,9 +15,12 @@ export default class extends Controller {
   reload(event) {
     event.preventDefault()
     if (this.frame && this.frame.src) {
+      this.frame.reload()
+      /*
       const src = this.frame.src
       this.frame.src = null
       this.frame.src = src
+       */
     }
   }
 }
