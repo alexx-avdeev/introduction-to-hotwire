@@ -1,0 +1,6 @@
+= turbo_frame_tag :quote_content do
+  %blockquote.blockquote.mb-0
+    %p= @quote['text']
+    %footer.blockquote-footer
+      by
+      %cite{ title: @quote['author'] }= @quote['author']

@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     get :show_data
   end
 
+  resource :lazy_loading, only: [:show] do
+    get :show_data
+  end
+
   resources :quotes do
     collection do
       get :broadcast
