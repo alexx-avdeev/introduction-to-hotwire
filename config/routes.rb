@@ -17,4 +17,6 @@ Rails.application.routes.draw do
       get :broadcast
     end
   end
+
+  resource :stimulus, only: :show
 end

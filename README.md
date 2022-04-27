@@ -9,6 +9,7 @@ Setup:
 * make sure you have a local instance of MongoDB running
 * `bundle install`
 * `rails s`
+* in order to have stimulus demo working go to [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/) and click request temporary access
 
 What is demonstrated:
 * Turbo frames

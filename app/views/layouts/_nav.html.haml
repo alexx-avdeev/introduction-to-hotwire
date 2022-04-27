@@ -13,6 +13,8 @@
           %a.nav-link.active{ aria: { current: "page" }, href: root_path, data: { turbo_frame: :main_content, turbo_action: :advance } } Home
         %li.nav-item
           = link_to 'Quotes', quotes_path, class: 'nav-link', data: { turbo_frame: :main_content, turbo_action: :advance }
+        %li.nav-item
+          = link_to 'Stimulus', stimulus_path, class: 'nav-link', data: { turbo_frame: :main_content, turbo_action: :advance }
         %li.nav-item.dropdown
           %a.nav-link.dropdown-toggle#navbarDropdown{ href: "#",
                                                           role: "button",

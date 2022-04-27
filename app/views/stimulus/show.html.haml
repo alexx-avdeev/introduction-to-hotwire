@@ -1,0 +1,8 @@
+= turbo_frame_tag :main_content do
+  .row
+    .col-12.col-md-6.offset-md-3
+      .card
+        .card-header
+          %h5 Targets and Values Example
+        .card-body{ data: { controller: "quote-loader", quote_loader_url_value: "https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random" } }
+          #data{ data: { quote_loader_target: "quote" } }
