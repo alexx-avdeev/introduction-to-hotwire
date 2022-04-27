@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="flash"
+// Connects to data-controller="quote-loader"
 export default class extends Controller {
     static targets = [ 'quote' ]
     static values = { url: String }
