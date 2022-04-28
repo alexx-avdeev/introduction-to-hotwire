@@ -28,7 +28,8 @@ class QuotesController < ApplicationController
     else
       respond_to do |format|
         flash.now[:danger] = "Failed to delete"
-        format.turbo_stream { render turbo_stream: turbo_stream.replace(@quote) }
+        format.turbo_stream { render turbo_stream: [turbo_stream.replace(@quote),
+                                                    turbo_stream.append(:flash_messages, partial: 'layouts/flash_messages')] }
       end
     end
   end

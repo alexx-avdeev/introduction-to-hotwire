@@ -6,3 +6,6 @@
           %h5 Targets and Values Example
         .card-body{ data: { controller: "quote-loader", quote_loader_url_value: "https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random" } }
           #data{ data: { quote_loader_target: "quote" } }
+        .card-footer
+          Inspirational quotes provided by
+          = link_to 'ZenQuotes API', 'https://zenquotes.io/', target: '_blank'
